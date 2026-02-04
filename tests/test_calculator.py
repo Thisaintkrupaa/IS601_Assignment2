@@ -19,7 +19,6 @@ def test_addition(monkeypatch):
     assert "Result: 5.0" in output
 
 
-
     def test_subtraction(monkeypatch):
         inputs = ['subtract 5 2', 'exit']
         output = run_calculator_with_input(monkeypatch, inputs)
