@@ -1,4 +1,4 @@
-from app.operations import addition, subtraction, multiplication, division
+from app.operations import Operations
 
 def calculator():
     print("Welcome to the Calculator REPL! type 'exist' to quit")
@@ -17,19 +17,19 @@ def calculator():
                 continue
         
         if operation == 'add':
-            result = addition(num1, num2)
+            result = Operations.addition(num1, num2)
         elif operation == 'subtract':
-            result = subtraction(num1, num2)
+            result = Operations.subtraction(num1, num2)
         elif operation == 'multiply':
-            result = multiplication(num1, num2)
+            result = Operations.multiplication(num1, num2)
         elif operation == 'divide':
             try:
-                result = division(num1, num2)
+                result = Operations.division(num1, num2)
             except ValueError as e:
                 print(e)
                 continue
         else:
-            print("Unknown operation '{operation}'.Suppoerted operations are: add, subtract, multiply, divide.")
+            print(f"Unknown operation '{operation}'. Supported operations are: add, subtract, multiply, divide.")
             continue
 
         print(f"Result: {result}")   
